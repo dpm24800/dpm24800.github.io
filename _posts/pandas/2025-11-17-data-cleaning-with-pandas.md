@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Data Cleaning With Pandas
-description: A practical, example-driven tutorial for data science & machine learning
+# description: A practical, example-driven tutorial for data science & machine learning
 thumbnail: ../../../../assets/images/pandas/data-cleaning.png
 author: Dipak Pulami Magar
 date:   2025-11-17 17:12:45 +0545
