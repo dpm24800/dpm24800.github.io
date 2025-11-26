@@ -8,6 +8,7 @@ date:   2025-11-18 20:12:45 +0545
 categories: pandas
 status: published
 ---
+
 - One-hot encoding in Pandas is a method to convert categorical data into a numerical format suitable for machine learning algorithms. 
 - It transforms a categorical column into multiple binary columns, where each new column represents a unique category from the original column.
 
@@ -58,3 +59,6 @@ When to use it:
 
 - **Multicollinearity:** 
 By default, `get_dummies` creates a column for every unique category. For some models (e.g., linear regression), this can introduce multicollinearity. `drop_first=True` can mitigate this.
+
+
+

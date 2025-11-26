@@ -191,13 +191,14 @@ df[df['height'] > 250]
 df.loc[df['age'] < 0, 'age'] = df['age'].median()
 ```
 
-<!-- # **9. Feature Engineering** 
-# **Feature Engineering**-->
+# **9. Feature Engineering** 
+
+# **Feature Engineering**
 ### **Create new columns**
 ```python
 df['total_price'] = df['quantity'] * df['unit_price']
 ```
-<!--
+
 ### **Binning**
 ```python
 df['age_group'] = pd.cut(df['age'], bins=[0,18,40,60,100],
@@ -215,7 +216,6 @@ df['year'] = df['date'].dt.year
 df['month'] = df['date'].dt.month
 df['weekday'] = df['date'].dt.day_name()
 ```
--->
 
 <!-- # **10. Renaming Columns** -->
 # **6. Renaming Columns**
@@ -230,7 +230,6 @@ df.columns = df.columns.str.lower().str.replace(' ', '_')
 df.rename(columns={'Sale Price': 'sale_price'}, inplace=True)
 ```
 
-<!--
 # **11. Scaling & Normalization**
 ### **Min-Max Scaling**
 ```python
@@ -247,8 +246,8 @@ from sklearn.preprocessing import StandardScaler
 
 scaler = StandardScaler()
 df[['salary_z']] = scaler.fit_transform(df[['salary']])
-``` -->
-<!-- 
+``` 
+
 ---
 
 # **12. End-to-End Example (Complete Walkthrough)**
@@ -315,7 +314,7 @@ A clean dataset ready for:
 * EDA
 * Visualization
 * Machine learning
-* Storage -->
+* Storage
 
 ---
 

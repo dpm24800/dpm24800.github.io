@@ -1,0 +1,68 @@
+Python
+- Syntax and I/O
+  - Comments
+  - Indentation/
+  - I/O
+- Variables
+- Keywords and Identifiers
+- 
+- Data Types
+  - Numeric
+    - int
+    - float
+    - complex
+  - Text
+    - str
+  - Sequence
+    - list
+    - tuple
+  - Mapping
+    - dictonary
+  - Set
+  - None
+  - Boolean
+  - Binary
+    - bytes
+    - bytearray
+    - memoryview
+  - type(), id()
+  - type conversion
+- Operators
+  - Arithmetic Operators
+  - Comparison/relational 
+  - Assignment Operators
+  - Logical operators
+  - Identity Operators
+  - Membership Operators
+  - Bitwise Operators
+  - Operator precedence and associativity
+- Conditional Statements
+  - if
+  - if...else
+  - if....elif...else
+  - nested conditions
+  - ternary operators
+- Loops
+  - For Loop
+  - While Loop
+  - loop control statements
+    - break
+    - continue
+    - pass
+  - loop `else` clause
+- Data Structures
+  - string
+  - list
+  - tuple
+  - dictionary
+    - features: mutable, ordered (since python 3.7+)
+    - key:value pairs
+    - creating
+    - accessing/indexing
+    - adding items
+    - updating items
+    - deleting items: del, pop()
+- Functions
+- Modules
+- Object Oriented Programming
+- 

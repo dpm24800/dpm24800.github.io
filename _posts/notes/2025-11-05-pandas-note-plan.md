@@ -209,9 +209,6 @@ status: draft
 
 ### Column Selection: selecting columns
 - `df.columns`: Column attributes
-- `df['col']` (Series) vs 
-- `df[['col']]` (DataFrame): Single column
-- `df[['col1', 'col2']]`: Multiple columns
 - `df['column_name']`: Single column as Series
 - `df[['column_name']]`: Single column as DataFrame
 - `df[['col1', 'col2']]`: Multiple columns
@@ -221,20 +218,16 @@ status: draft
 #### By label/index: `.loc[]` (label-based indexing)
 - `df.loc['index_label']`: Single row
 - `df.loc[['label1', 'label2']]`: Multiple rows
-- `df.loc['start':'end']` (inclusive): Slicing: Slicing with labels
-* `df.loc['label1':'label3']` (inclusive!)
+* `df.loc['label1/start':'label3/end']` (inclusive!): Slicing with labels
 
 #### By integer position: (position-based indexing)`.iloc[]` 
-  - Single row: `df.iloc[0]`
-  - Multiple rows: `df.iloc[[0, 2, 4]]`
-  - Slicing: `df.iloc[0:5]` (exclusive)
-  - Single row: `df.iloc[0]`
-  - Multiple rows: `df.iloc[[0, 2, 4]]`
-  - Slicing with integers: `df.iloc[0:5]` (exclusive of the stop index)
+  - `df.iloc[0]`: Single row: 
+  - `df.iloc[[0, 2, 4]]`: Multiple rows: 
+  - `df.iloc[0:5]`: Slicing with index-position (exclusive of the stop index)
 
 #### Boolean Indexing/Filtering Data/Conditional selection 
 - Single condition
-  - `df[df['col'] <opearator> value]`: 
+  - `df[df['col'] > value]`: 
     - `df[df['age'] > 30]`: 
     - `df.loc[df['age'] > 30]`:
 * Multi-condition filtering with `&`, `|`, `~`:
@@ -251,9 +244,10 @@ status: draft
 ### Combined Selection/Selecting Subsets (of Rows and Columns)/Subsetting
 - `df.loc[row_labels, col_labels]`:
   - `df.loc[3,'weight']`
-  - `df.loc[3,'weight'] = 50`
+  - `df.loc[3,'weight'] = 50` # changing its value
 - `df.iloc[row_positions, col_positions]`:
-  - `df.iloc[3,'weight'] = 50`
+  - `df.iloc[]
+  - `df.iloc[3,'weight'] = 50` 
 
 
 * Using `.loc[]`: 
@@ -262,7 +256,7 @@ status: draft
 * Using `.iloc[]`: 
   * `df.iloc[row_indices, column_indices]`
   * `df.iloc[3, 3]`
-  * `df.iloc[3, 3] = 50` ---> change values of [3,3] to 50
+  * `df.iloc[3, 3] = 50` # change values of [3,3] to 50
   * Example: `df.iloc[0:5, [1, 3]]`
 
 - `df.at[]` and `df.iat[]` for scalar access
@@ -274,11 +268,11 @@ status: draft
 ### 6.1. Handling Missing Data: [done]
 - Detecting/identifying/checking missing values/data:
   - `.isna()`: 
-  - `.isnull()`: 
+  - `.isnull()`:
   - `.notna()`: 
   - `.notnull()`: 
 - Counting: 
-  - `.isnull().sum()`: missing value counts; Count of missing values per column.
+  - `.isnull().sum()`: Count of missing values per column.
   - `.isnull().mean()`: 
 - Dropping missing values: 
   - `.dropna()`: 
@@ -296,10 +290,10 @@ status: draft
 - Dropping or filling NaNs conditionally
 
 ### 6.2. Handling Duplicates/duplicate data: [done]
-- `.duplicated()`: Detecting/identifying duplicates:
+- `df.duplicated()`: Detecting/identifying duplicates:
   - (subset, keep)
-- `.duplicated().sum()`: Counting duplicates
-- `.drop_duplicates()`: Removal/Dropping duplicates
+- `df.duplicated().sum()`: Counting duplicates
+- `df.drop_duplicates()`: Removing/dropping duplicates
   - (subset, keep='first'/'last'/False)
 
 ### 6.3. Column Operations: Adding, Renaming/modifying and Dropping  
@@ -311,6 +305,7 @@ status: draft
 
 - **Renaming columns**: `.rename()` [done]
   * `df.rename(columns={'old':'new', 'old':'new'})`: 
+  * `df.rename({'make':'make1', 'model':'model1'}, axis=1)`
 
 - **Dropping columns/index**: `df.drop()`
   - `df.drop(columns=[])`: 
@@ -331,13 +326,15 @@ status: draft
 - **Adding an Index**: #Adding new index/row in pandas
   - `df.loc['k'] = ['rabbit', 4, 2, 'yes']`
   - Adding multiple indexes: using `.concat()`
+
 - **Rename index(s)/row(s)**
-  - `df.rename({2:20, 3:30})` ---> rename index 2 and 3 to 20 and 30
-  - `df.rename({2:20, 3:30}, axis=0)`
-  - `df.rename(index={2:20, 3:30})`
+  - `df.rename({2:20, 3:30})` # rename index 2 and 3 to 20 and 30
+  - `df.rename({2:20, 3:30}, axis=0)` # same thing, axis is optional/dual
   - `df.rename({'a':'A', 'b':'B'})`
+  - `df.rename(index={2:20, 3:30})`
+  
 - **Drop index(s)/row(s)**:
-  - `df.drop(4)` 
+  - `df.drop(4)`: 
   - `df.drop(5, axis=0)` # axis=0, optional/default
   - `df.drop([6, 7, 8], axis=0)`
   - `df.drop('k', axis=0)`

@@ -1,0 +1,41 @@
+NumPy
+- Introduction
+- Why Use NumPy/Feature of NumPy
+- Installation, verification (of installation) and Import
+- Array Attributes:
+	- arr.ndim
+	- arr.shape
+	- arr.size
+	- arr.dtype
+		- changing data type
+	- arr.ndmin (changing dimensions)
+- Creating Array
+	- np.array(): from Python list/tuple
+	- Using Initial placeholders:
+		- np.zeros()
+		- np.ones()
+		- np.full()
+		- Identity Matrix:
+    		- np.eye()
+    		- np.identity()
+	- np.arange(): array range
+	- np.linspace(): linearly spaced values
+	- np.random. : using np.random module
+		- np.random.rand()
+		- np.random.randint()
+		- np.random.seed()
+- Array Indexing
+- Array Slicing
+- Array Manipulation
+	- np.reshape()
+	- np.flatten()
+	- Transpose
+    	- np.T
+    	- np.transpose()
+- Iteration over Arrays: 
+	- np.ndenumerate()
+- Misc
+	- np.sort(): sorting array
+	- np.where(): conditional ___
+	- np.append(): 
+	- np.concatinate(): concatinate array

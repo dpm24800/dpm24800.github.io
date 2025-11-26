@@ -279,8 +279,12 @@ b. while True:
 c. while False:  
 d. for i in [1,2,3]:  
 
+---
 
-# Answers
+<center>
+    <h2>Answers</h2>
+</center>
+
 **1**: d. nht  
 **2**: b. Execute code regardless of exception    
 **3**: c. clear()    
@@ -333,4 +337,5 @@ Tuple: Immutable, Ordered, Allows duplicates
 **25**: b. while True:
 
 ---
-Thank You.
+
+<center>***** Thank You.*****</center>

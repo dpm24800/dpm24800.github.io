@@ -13,7 +13,7 @@ status: published
 </center>
 
 ## Introduction
-Among the three characteristics taught by the Buddha, **anicca — impermanence** — is the most commonly mentioned yet the most misunderstood. It is often reduced to a simple idea: “everything changes.” While factually true, this understanding remains superficial and does not touch the liberating insight taught in the early Buddhist texts.
+Among the three characteristics taught by the Buddha, **anicca — impermanence** — is the most commonly mentioned yet the most misunderstood. It is often reduced to a simple idea: “everything changes”. While factually true, this understanding remains superficial and does not touch the liberating insight taught in the early Buddhist texts.
 
 In this article, based on a discussion with **[Ajahn Ñāṇamoli Thero](https://www.youtube.com/watch?v=zPmfB2to2sQ)**, we explore the true depth of anicca and how it must be understood on the level of **saṅkhārās** — the underlying structures that determine experience itself.
 
@@ -29,14 +29,12 @@ Because it is understood **at the wrong level** — the level of **dhammas** (ph
 
 The Buddha did **not** say “all things are impermanent.”
 He said:
-
-> sabbe saṅkhārā aniccā — all formations/conditioned constructs are impermanent.
+- *sabbe saṅkhārā aniccā* — all formations/conditioned constructs are impermanent.
 
 This difference is crucial.
 
 ## 2. What Are Saṅkhārās?
-**The Hidden Basis of Experience**
-
+**The Hidden Basis of Experience**  
 Saṅkhārās are not the objects you experience. They are the **determinants**, the underlying structures that make experience possible:
 
 * The living body
