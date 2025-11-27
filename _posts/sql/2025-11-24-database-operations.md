@@ -2,7 +2,7 @@
 layout: post
 title: Database Operations – SQL
 author: Dipak Pulami Magar
-date :  2025-11-24 2:12:45 +0545
+date :  2025-11-24 10:12:45 +0545
 categories: sql
 status: draft
 ---

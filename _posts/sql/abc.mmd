@@ -1,0 +1,27 @@
+flowchart TD
+    %% Nodes %%
+    A[Super Key<br><i>Any attribute/set that uniquely identifies rows</i>] --> B[Candidate Key<br><i>Minimal super key</i>]
+    B --> C[Primary Key<br><i>Chosen candidate key</i>]
+    B --> D[Alternate Key<br><i>Other candidate keys</i>]
+    B --> E[Composite Key<br><i>2+ attributes used together</i>]
+    C --> F[Foreign Key<br><i>References PK of another table</i>]
+
+    %% Relationship between tables %%
+    subgraph Parent_Table
+        C
+    end
+    subgraph Child_Table
+        F
+    end
+    F --- C
+
+    %% Styling nodes directly %%
+    style A fill:#cca3a3,stroke:#ff0000,color:#660000
+    style B fill:#a3cca3,stroke:#008000,color:#003300
+    style C fill:#cfccff,stroke:#0000ff,color:#000066
+    style D fill:#ffffcc,stroke:#cccc00,color:#666600
+    style E fill:#ffccff,stroke:#cc00cc,color:#660066
+    style F fill:#ccffff,stroke:#00cccc,color:#006666
+
+    %% Arrow styling %%
+    linkStyle 0,1,2,3,4,5 stroke:#ff3f9f,stroke-width:2px

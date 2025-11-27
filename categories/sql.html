@@ -7,8 +7,21 @@ category: sql
 ---
 <h1>Posts in category: {{ page.category }}</h1>
 
+<!-- 
+latest posts at first
 <ul>
   {% for post in site.categories[page.category] %}
+    <li>
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      <span> — {{ post.date | date: "%Y-%m-%d" }}</span>
+    </li>
+  {% endfor %}
+</ul> -->
+
+
+<ul>
+  {% assign sorted_posts = site.categories[page.category] | sort: "date" %}
+  {% for post in sorted_posts %}
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       <span> — {{ post.date | date: "%Y-%m-%d" }}</span>

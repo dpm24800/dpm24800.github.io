@@ -62,3 +62,13 @@ plugins:
 #         url: /misc/
 #       - title: "About"
 #         url: /about/
+
+# kramdown:
+#   input: GFM
+#   hard_wrap: false
+#   syntax_highlighter: rouge
+#   syntax_highlighter_opts:
+#     block:
+#       disable: true
+#   parse_block_html: true
+#   auto_id_stripping: true

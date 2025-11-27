@@ -3,7 +3,7 @@ layout: post
 title: CRUD Operations – SQL
 description: Create, Read, Update, Delete Operations
 author: Dipak Pulami Magar
-date :  2025-11-26 2:12:45 +0545
+date :  2025-11-24 20:12:45 +0545
 categories: sql
 status: draft
 ---
@@ -21,33 +21,35 @@ INSERT INTO table_name (column1, column2, ...)
 VALUES (value1, value2, ...);
 ```
 
-**Examples**:
+**Example**:
 ```sql
 INSERT INTO Employees (EmployeeID, Name, Department)
 VALUES (101, 'Alice Smith', 'Sales');
 ```
 
-
 ## 2. Selecting/Retrieving Records (R-ead Operation)
 The `SELECT` command is used to retrieve data from a table or a set of tables. This is the most frequently used command.
 
-To retrieve all columns and all rows:
-
+**Syntax:** 
 ```sql
+SELECT column1, column2, ... FROM table_name;
+SELECT column1, column2, ... FROM table_name WHERE condition;
+```
+The `WHERE` clause is optional but crucial for filtering results.
+
+**Example**:
+```sql
+-- Retrieve all columns and all rows
 SELECT *
 FROM Employees;
 ```
 
-To retrieve specific columns for employees in the 'Sales' department:
-
 ```sql
+-- Retrieve specific columns for employees in the 'Sales' department
 SELECT Name, EmployeeID
 FROM Employees
 WHERE Department = 'Sales';
 ```
-
-  * **Syntax:** `SELECT column1, column2, ... FROM table_name WHERE condition;`
-  * The `WHERE` clause is optional but crucial for filtering results.
 
 ## 3. Updating Records (U-pdate Operation)
 The `UPDATE` command is used to modify existing data in one or more rows of a table.  

@@ -2,7 +2,7 @@
 layout: post
 title: SQL Operators – SQL
 author: Dipak Pulami Magar
-date :  2025-11-26 16:12:45 +0545
+date :  2025-11-25 16:12:45 +0545
 categories: sql
 status: draft
 ---
