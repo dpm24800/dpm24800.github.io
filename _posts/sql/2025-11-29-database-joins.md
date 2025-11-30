@@ -11,17 +11,11 @@ A database join is a fundamental operation in relational database management sys
 
 Joins are essential for retrieving data that is distributed across multiple tables and presenting it as a single, unified result set.
 
-
-
 There are several types of SQL joins, each with a distinct behavior:
 
 - **INNER JOIN**: Returns only the rows where there is a match in both tables based on the specified join condition. Rows without a match in either table are excluded.
 
-Code
-
-
-
-```
+```sql
     SELECT *
     FROM TableA
     INNER JOIN TableB ON TableA.common_column = TableB.common_column;
@@ -29,11 +23,7 @@ Code
 
 - **LEFT (OUTER) JOIN**: Returns all rows from the left table and the matching rows from the right table. If there's no match in the right table, `NULL` values are returned for the right table's columns.
 
-Code
-
-
-
-```
+```sql
     SELECT *
     FROM TableA
     LEFT JOIN TableB ON TableA.common_column = TableB.common_column;
@@ -41,11 +31,7 @@ Code
 
 - **RIGHT (OUTER) JOIN**: Returns all rows from the right table and the matching rows from the left table. If there's no match in the left table, `NULL` values are returned for the left table's columns.
 
-Code
-
-
-
-```
+```sql
     SELECT *
     FROM TableA
     RIGHT JOIN TableB ON TableA.common_column = TableB.common_column;
@@ -53,11 +39,7 @@ Code
 
 - **FULL (OUTER) JOIN**: Returns all rows when there is a match in one of the tables. If there's no match in either table, `NULL` values are returned for the non-matching table's columns.
 
-Code
-
-
-
-```
+```sql
     SELECT *
     FROM TableA
     FULL JOIN TableB ON TableA.common_column = TableB.common_column;
@@ -65,11 +47,7 @@ Code
 
 - **CROSS JOIN**: Produces a Cartesian product of the two tables, meaning every row from the first table is combined with every row from the second table. This type of join does not require a join condition.
 
-Code
-
-
-
-```
+```sql
     SELECT *
     FROM TableA
     CROSS JOIN TableB;
