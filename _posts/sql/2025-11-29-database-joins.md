@@ -1,8 +1,8 @@
 ---
 layout: post
-title: SQL Joins
-author: Dipak Pulami Magar
-date :  2025-11-30 5:12:45 +0545
+title: Database Joins
+author: Reshika Garanja Magar
+date :  2025-11-29 5:12:45 +0545
 categories: sql
 status: draft
 ---
