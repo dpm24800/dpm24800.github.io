@@ -2,7 +2,7 @@
 layout: post
 title: Database Operations – SQL
 author: Dipak Pulami Magar
-thumbnail: ../../../../../assets/images/sql/database-operations.png
+thumbnail: ../../../../assets/images/sql/database-operations.png
 date :  2025-11-24 10:12:45 +0545
 categories: sql
 status: draft
@@ -19,7 +19,7 @@ CREATE DATABASE database_name;
 -- Safely creates the database only if it doesn’t already exist, preventing errors.
 CREATE DATABASE IF NOT EXISTS database_name; 
 ```
-**Example**:
+Example:
 ```
 CREATE DATABASE hotel;
 CREATE DATABASE IF NOT EXISTS library;
@@ -34,7 +34,7 @@ After creating a database it needs to be selected/used before working on it. For
 USE database_name;
 ```
 
-**Example**:
+Example:
 ```
 USE library;
 ```
@@ -75,8 +75,8 @@ To drop/remove a existing database, `DROP` keyword is used thus:
 -- Removing a database;
 DROP DATABASE database_name;
 ```
-**Example**:
-```
+Example:
+```sql
 DROP DATABASE library;
 ```
 

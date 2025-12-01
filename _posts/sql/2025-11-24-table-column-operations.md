@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Table & Columns Operations – SQL
-# thumbnail: ../../../../../assets/images/sql/table-operations.png
 thumbnail: ../../../../assets/images/sql/table-operations.png
 author: Dipak Pulami Magar
 date :  2025-11-24 14:12:45 +0545
