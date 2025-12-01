@@ -1,0 +1,18 @@
+flowchart LR
+    A["
+    **CUSTOMERS**
+    ----------------------
+    customer_id (PK)
+    customer_name
+    email
+    phone
+    "] 
+    -->|"1 to Many"| 
+    B["
+    **ORDERS**
+    ----------------------
+    order_id (PK)
+    order_date
+    amount
+    customer_id (FK)
+    "]
