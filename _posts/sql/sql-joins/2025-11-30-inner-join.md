@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Inner Join
+title: Inner Join – SQL
 description: 
 author: Dipak Pulami Magar
 date :  2025-11-30 5:12:45 +0545
-categories: sql
+categories: sql join
 status: draft
 ---
 
