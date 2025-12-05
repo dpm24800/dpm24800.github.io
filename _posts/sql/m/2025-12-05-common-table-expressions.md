@@ -2,7 +2,7 @@
 layout: post
 title: Common Table Expressions (CTE) – SQL
 description: Define temporary, named result sets for cleaner queries
-thumbnail: ../../../../assets/images/sql/common-table-expressions.png
+thumbnail: ../../../../assets/images/sql/common_table_expressions.png
 author: Dipak Pulami Magar
 date :  2025-12-05 14:12:45 +0545
 categories: sql
