@@ -236,7 +236,7 @@ print("Average Score:", scores.mean())
 * Not practical for most ML problems
 
 
-## Final Summary Table
+## K-Fold vs Stratified K-fold Vs LOOCV
 
 | CV Type                        | Best For                  | Benefits            | Limitations             |
 | ------------------------------ | ------------------------- | ------------------- | ----------------------- |
