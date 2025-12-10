@@ -5,7 +5,7 @@ title: Train–Test Split (Hold-Out Method)
 thumbnail: ../../../../assets/images/ml/train-test-split.png
 author: Dipak Pulami Magar
 date:   2025-12-09 10:12:45 +0545
-categories: matplotlib
+categories: ml
 status: draft
 ---
 
