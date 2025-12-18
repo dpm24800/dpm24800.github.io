@@ -1,0 +1,39 @@
+syntax,example,output,work
+time.time(),,1765889855.670495, Returns the current time in seconds since the Unix Epoch as a floating-point number.
+time.perf_counter(),, , Returns a high-resolution timer suitable for precise performance measurement.
+time.sleep(seconds), time.sleep(2),, Suspends program execution for the given number of seconds.
+time.localtime([seconds]),,time.struct_time(tm_year=2025, tm_mon=12, tm_mday=16, tm_hour=18, tm_min=44, tm_sec=58, tm_wday=1, tm_yday=350, tm_isdst=0), Converts a timestamp to local time as a struct_time object.
+time.gmtime([seconds]), time.gmtime(), time.struct_time(tm_year=2025, tm_mon=12, tm_mday=16, tm_hour=13, tm_min=0, tm_sec=32, tm_wday=1, tm_yday=350, tm_isdst=0), Converts a timestamp to UTC (Greenwich Mean Time).
+time.strftime(format, struct_time), time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), 2025-12-16 18:46:00, Formats time into a readable string.
+time.asctime([struct_time]), time.asctime(time.localtime()), Tue Dec 16 18:46:26 2025, Converts a struct_time to a readable string.
+time.ctime([seconds]), time.ctime(time.time()), Tue Dec 16 18:46:54 2025, Converts a timestamp directly to a readable string.
+time.strptime(string, format), time.strptime("2025-12-16", "%Y-%m-%d"), time.struct_time(tm_year=2025, tm_mon=12, tm_mday=16, tm_hour=0, tm_min=0, tm_sec=0, tm_wday=1, tm_yday=350, tm_isdst=-1), Parses a time string into a struct_time.
+time.mktime(struct_time), time.mktime(time.localtime()), 1765901413.0, Converts struct_time to seconds since the epoch.
+time.process_time(),,2.71875,Returns CPU time used by the current process.
+
+
+syntax,example,output,work
+time.strptime(string, format),,,Parses a time string into a struct_time.
+time.mktime(struct_time),time.mktime(time.localtime()),1765901413.0,Converts struct_time to seconds since the epoch.
+time.process_time(),,2.71875,Returns CPU time used by the current process.
+
+
+
+syntax,example,output,work
+time.time(),,1765889855.670495,Returns the current time in seconds since the Unix Epoch as a floating-point number.
+time.perf_counter(),,,Returns a high-resolution timer suitable for precise performance measurement.
+time.sleep(seconds),time.sleep(2),, Suspends program execution for the given number of seconds.
+time.localtime([seconds]),,time.struct_time(tm_year=2025\, tm_mon=12\, tm_mday=16\, tm_hour=18\, tm_min=44\, tm_sec=58\, tm_wday=1\, tm_yday=350\, tm_isdst=0), Converts a timestamp to local time as a struct_time object.
+time.gmtime([seconds]),time.gmtime(),time.struct_time(tm_year=2025\, tm_mon=12\, tm_mday=16\, tm_hour=13\, tm_min=0\, tm_sec=32\, tm_wday=1\, tm_yday=350\, tm_isdst=0), Converts a timestamp to UTC (Greenwich Mean Time).
+time.strftime(format\, struct_time), time.strftime("%Y-%m-%d %H:%M:%S"\, time.localtime()), 2025-12-16 18:46:00, Formats time into a readable string.
+time.asctime([struct_time]),time.asctime(time.localtime()),Tue Dec 16 18:46:26 2025,Converts a struct_time to a readable string.
+time.ctime([seconds]),time.ctime(time.time()),Tue Dec 16 18:46:54 2025,Converts a timestamp directly to a readable string.
+time.strptime(string\,format),time.strptime("2025-12-16"\, "%Y-%m-%d"), time.struct_time(tm_year=2025\, tm_mon=12\, tm_mday=16\, tm_hour=0\, tm_min=0\, tm_sec=0\, tm_wday=1\, tm_yday=350\, tm_isdst=-1), Parses a time string into a struct_time.
+time.mktime(struct_time),time.mktime(time.localtime()),1765901413.0,Converts struct_time to seconds since the epoch.
+time.process_time(),,2.71875,Returns CPU time used by the current process.
+
+
+syntax,example,output,work
+time.strptime(string\, format),,,Parses a time string into a struct_time.
+time.mktime(struct_time),time.mktime(time.localtime()),1765901413.0,Converts struct_time to seconds since the epoch.
+time.process_time(),,2.71875,Returns CPU time used by the current process.

@@ -2,7 +2,7 @@
 layout: post
 title: Feature Scaling
 # description: 
-# thumbnail: ../../../../assets/images/ml/feature-scaling.png
+thumbnail: /assets/images/ml/feature-scaling.png
 author: Dipak Pulami Magar
 date:   2025-12-10 10:12:45 +0545
 categories: ml
@@ -15,7 +15,7 @@ In simple terms:
 
 > *Feature scaling transforms numerical features so that they share a comparable range and distribution.*
 
-Without scaling, many ML algorithms may perform poorly because they interpret larger values as more important—even when they’re not.
+Without scaling, many ML algorithms may perform poorly because they interpret larger values as more important — even when they’re not.
 
 ### Why Feature Scaling Is Important
 **1. Prevents Dominance of Large-Range Features**  
@@ -60,6 +60,21 @@ Feature scaling techniques fall into three broad categories:
   
 <!-- 3. Robust Scalers (resistant to outliers) -->
 
+### 1. MaxAbs Scaling
+Scales values to range **-1 to 1**, preserving sparsity.
+
+Formula:
+$$
+x' = \frac{x}{|x|_{max}}
+$$
+
+Used for:
+* Text features
+* Sparse data (TF–IDF)
+
+```python
+from sklearn.preprocessing import MaxAbsScaler
+```
 
 ###  1. Normalization (Min-Max Scaling)
 Normalization rescales values to a range of **0 to 1**:
@@ -91,7 +106,6 @@ X_scaled = scaler.fit_transform(X)
 
 
 ### 2. Standardization (Z-score Scaling)
-
 Standardization transforms data so that:
 
 * Mean = 0
@@ -157,24 +171,6 @@ X_scaled = scaler.fit_transform(X)
 ---
 
 # **Additional Scaling Techniques**
-
-### **4. MaxAbs Scaling**
-
-Scales values to range **-1 to 1**, preserving sparsity.
-
-Formula:
-
-$$
-x' = \frac{x}{|x|_{max}}
-$$
-
-Used for:
-* Text features
-* Sparse data (TF–IDF)
-
-```python
-from sklearn.preprocessing import MaxAbsScaler
-```
 
 ---
 

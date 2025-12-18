@@ -157,6 +157,21 @@ ALTER TABLE orders
 DROP COLUMN quantity;
 ```
 
+**Summary**:
+```sql
+ALTER TABLE table_name
+ADD COLUMN column_name datatype constraints;
+MODIFY column_name datatype constraints;
+CHANGE COLUMN column_name (new)column_name datatype constraints;
+DROP COLUMN column_name;
+
+ALTER TABLE orders
+ADD COLUMN amount FLOAT;
+MODIFY amount FLOAT NOT NULL;
+CHANGE COLUMN library_id library_id INT NOT NULL AUTO_INCREMENT;
+CHANGE COLUMN dist district VARCHAR(50) NULL DEFAULT NULL; -- name changed here
+DROP COLUMN quantity;
+```
 ---
 
 # C. Row Operations

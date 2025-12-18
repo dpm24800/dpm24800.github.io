@@ -71,15 +71,15 @@ Especially if the dataset is unbalanced.
 **1. From Scratch/Manual**:   
 ```py
 import numpy as np
-import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 
 np.random.seed(33)
 
 noise = np.random.normal(0, 5, 50)
-x = np.random.uniform(low=1, high=30, size=50) # study hours
-y = 3 * x + noise; # scores
+X = np.random.uniform(low=1, high=30, size=50) # study hours
+y = 3 * X + noise; # scores
 
-x = x.reshape(50, 1)
+X = X.reshape(50, 1) # X = np.reshape(X,(50,1))
 
 index = np.arange(0, 50);
 np.random.shuffle(index)
@@ -92,18 +92,18 @@ test_index = index[ratio:]
 # print(train_index)
 # print(test_index)
 
-x_train = x[train_index]
+X_train = X[train_index]
 y_train = y[train_index]
 
-x_test = x[test_index]
+X_test = X[test_index]
 y_test = y[test_index]
 
 
 print("TRAIN SPLIT: \n")
-print(x_train)
+print(X_train)
 
-print("\nx_train Size:", x_train.size)
-print("x_train Shape", x_train.shape)
+print("\nX_train Size:", X_train.size)
+print("X_train Shape", X_train.shape)
 
 print()
 print(y_train)
@@ -112,13 +112,13 @@ print("y_train Shape", y_train.shape)
 
 
 print("\nTEST SPLIT:")
-print(x_test)
-print("\nx_test Size:", x_test.size)
-print("x_test Shape", x_test.shape)
+print(X_test)
+print("\nX_test Size:", X_test.size)
+print("X_test Shape", X_test.shape)
 
 print()
 print(y_test)
-print("y_test Size", y_test.size)
+print("\ny_test Size", y_test.size)
 print("y_test Shape", y_test.shape)
 ```
 Output:
@@ -166,8 +166,8 @@ TRAIN SPLIT:
  [ 8.97698061]
  [23.13653048]]
 
-x_train Size: 40
-x_train Shape (40, 1)
+X_train Size: 40
+X_train Shape (40, 1)
 
 [69.72156851 62.94422548 63.80453511 31.34559874 67.91041853 77.66923638
  51.55177821 61.35193578 18.33047534 50.09291314 16.47979925 36.40783023
@@ -192,11 +192,12 @@ TEST SPLIT:
  [23.74821839]
  [19.94613332]]
 
-x_test Size: 10
-x_test Shape (10, 1)
+X_test Size: 10
+X_test Shape (10, 1)
 
 [46.18595802 29.55172448 40.89575023 19.84828003 84.35905256 52.73836469
  52.81105396 29.54531306 70.5005271  68.50989521]
+
 y_test Size 10
 y_test Shape (10,)
 ```
