@@ -4,7 +4,6 @@
 not just the real patterns, but also the **noise, mistakes, and random details**.
 
 As a result:
-
 * The model performs **very well on training data**
 * But performs **poorly on unseen test data**
 
@@ -12,7 +11,7 @@ As a result:
 
 ---
 
-# 📘 Example (Easy to Understand)
+# Example (Easy to Understand)
 
 Imagine you are preparing for an exam:
 
@@ -24,7 +23,7 @@ This is exactly what overfitting looks like.
 
 ---
 
-# 🧠 Technical Understanding
+# Technical Understanding
 
 An overfitted model has:
 
@@ -45,7 +44,7 @@ Overfitting:  model is too complex — memorizes noise
 
 ---
 
-# 🔍 How to Detect Overfitting?
+# How to Detect Overfitting?
 
 Look for this pattern:
 
