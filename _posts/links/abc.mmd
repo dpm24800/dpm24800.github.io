@@ -1,0 +1,57 @@
+flowchart TB
+    ML[Machine Learning]
+
+    ML --> SL[Supervised Learning]
+    ML --> UL[Unsupervised Learning]
+    ML --> RL[Reinforcement Learning]
+
+    %% Supervised Learning
+    SL --> SL_Data[Data with Label]
+    SL_Data --> Classif[Classification]
+    SL_Data --> Regr[Regression]
+
+    Classif --> LR[Logistic Regression]
+    Classif --> NB[Naïve Bayes]
+    Classif --> KNN[K-Nearest Neighbour]
+    Classif --> SVM[Support Vector Machine]
+    Classif --> C_Ex[Examples<br/>Email Spam Detection<br/>Speech Recognition]
+
+    Regr --> LinReg[Linear Regression]
+    Regr --> Ridge[Ridge Regression]
+    Regr --> OLS[Ordinary Least Squares]
+    Regr --> Step[Stepwise Regression]
+    Regr --> R_Ex[Examples<br/>Stock Market Prediction<br/>Rainfall Prediction]
+
+    %% Unsupervised Learning
+    UL --> UL_Data[Data without Label]
+    UL_Data --> Cluster[Clustering]
+    UL_Data --> Assoc[Association Analysis]
+    UL_Data --> DR[Dimensionality Reduction]
+
+    Cluster --> KM[K-Means]
+    Cluster --> KMed[K-Median]
+    Cluster --> HC[Hierarchical Clustering]
+    Cluster --> EM[Expectation Maximization]
+    Cluster --> Cl_Ex[Examples<br/>Fake News Identification<br/>Document Analysis]
+
+    Assoc --> Apriori[Apriori]
+    Assoc --> Eclat[Eclat]
+    Assoc --> FPG[FP-Growth]
+    Assoc --> As_Ex[Example<br/>Market Basket Analysis]
+
+    DR --> FE[Feature Extraction<br/>PCA]
+    DR --> FS[Feature Selection<br/>Wrapper / Filter / Embedded]
+    DR --> DR_Ex[Example<br/>Text & DNA Microarray Analysis]
+
+    %% Reinforcement Learning
+    RL --> State[State and Action]
+    State --> MF[Model-Free]
+    State --> MB[Model-Based]
+
+    MF --> QL[Q-Learning]
+    MF --> Hybrid[Hybrid]
+    MF --> PO[Policy Optimization]
+
+    MB --> Learn[Learn the Model]
+    MB --> Given[Given the Model]
+    MB --> RL_Ex[Examples<br/>Multi-agent System<br/>Motion Planning<br/>Navigation]
