@@ -277,7 +277,7 @@ $$
 P(Spam|Email) > P(NotSpam|Email)
 $$
 
-**➡ Classified as Spam**
+**Classified as Spam**
 
 ------
 
