@@ -9,7 +9,6 @@ categories: ml supervised classification
 status: draft
 ---
 
-
 ## 1. Introduction
 Machine Learning allows computers to learn patterns from data and make decisions without being explicitly programmed. One of the most popular and simple algorithms used for **classification problems** is the **Naive Bayes Algorithm**.
 
@@ -26,7 +25,6 @@ Naive Bayes is a **supervised learning algorithm** based on **Bayes’ Theorem**
 It predicts the class of a data point by calculating probabilities and choosing the class with the **highest probability**.
 
 It is called **“Naive”** because it assumes that **all features are independent of each other**, which is usually not true in real life.
-
 
 ## 3. Bayes’ Theorem
 Bayes’ Theorem describes the probability of an event based on prior knowledge.
@@ -56,10 +54,7 @@ $$
 
 The denominator is ignored because it is the same for all classes.
 
-------
-
 ## 5. Types of Naive Bayes
-
 ### 5.1 Gaussian Naive Bayes
 - Used for **continuous data**
 - Assumes features follow a **normal distribution**
@@ -73,9 +68,7 @@ The denominator is ignored because it is the same for all classes.
 - Binary features (0 or 1)
 - Checks presence/absence of features
 
-------
-
-## 6. Manual Numerical Example (Spam Detection – Extended)
+## 6. Manual Numerical Example (Spam Detection)
 
 ### Dataset (10 Emails)
 
@@ -129,8 +122,6 @@ $$
 | offer | 1     |
 | free  | 1     |
 
-------
-
 #### Not Spam Emails (Total words = 12)
 
 | Word     | Count |
@@ -143,8 +134,6 @@ $$
 | schedule | 1     |
 | (others) | 0     |
 
-------
-
 ### Step 4: Laplace Smoothing Formula
 
 $$
@@ -154,11 +143,7 @@ $$
 - Spam denominator = (13 + 14 = 27)
 - Not Spam denominator = (12 + 14 = 26)
 
-------
-
 ## Predictions
-
-------
 
 ## Prediction 1: **Equal Probabilities**
 
@@ -179,8 +164,6 @@ $$
 = 0.0027
 $$
 
-------
-
 ### Not Spam Probability
 
 $$
@@ -196,8 +179,6 @@ $$
 
 **Equal probabilities**
 
-------
-
 ## Prediction 2: **Spam Email**
 
 **Email:** `"claim free prize now"`
@@ -208,8 +189,6 @@ Words in the email:
 - free
 - prize
 - now
-
-------
 
 ### Spam Probability
 
@@ -243,8 +222,6 @@ $$
 \approx 0.00090
 $$
 
-------
-
 ### Not Spam Probability
 
 Using Laplace smoothing
@@ -269,8 +246,6 @@ $$
 \approx 0.0000011
 $$
 
-------
-
 ### Decision
 
 $$
@@ -278,8 +253,6 @@ P(Spam|Email) > P(NotSpam|Email)
 $$
 
 **Classified as Spam**
-
-------
 
 ## Prediction 3: **Not Spam Email**
 
@@ -296,8 +269,6 @@ $$
 = 0.000025
 $$
 
-------
-
 ### Not Spam Probability
 
 $$
@@ -312,8 +283,6 @@ $$
 ### Decision:
 
 **Classified as Not Spam**
-
-------
 
 ## Prediction 4: **Zero Probability Problem (Without Laplace)**
 
@@ -341,12 +310,9 @@ $$
 
 **Spam probability becomes zero → model breaks**
 
-------
-
 ## Fix Using Laplace Smoothing
 
 ### Spam Probability
-
 $$
 0.5 \times \frac{0+1}{27} \times \frac{0+1}{27}
 = 0.00068
@@ -375,16 +341,12 @@ P(w|c) = \frac{count(w,c)+1}{total + V}
 
 This ensures no probability becomes zero. -->
 
-------
-
 ## Key Takeaways
 
 - Naive Bayes uses **probability multiplication**
 - One unseen word → probability becomes **zero**
 - **Laplace smoothing fixes this issue**
 - Works extremely well for **text classification**
-
-
 
 ## 10. Python Implementation (Scikit-Learn)
 
@@ -453,7 +415,7 @@ for email, pred, prob in zip(test_emails, predictions, probabilities):
     print("Class probabilities:", prob)
 ```
 
-Output:
+**Output**:
 ```py
 Email: win meeting
 Prediction: Not Spam
@@ -533,7 +495,7 @@ for i in range(len(input_data)):
     print(f"P(Yes|{feat['Outlook']}, {feat['Temperature']}, {feat['Humidity']}, {feat['Wind']}) = {probs[i][1]:.4f}")
     print("Predicted PlayTennis:", "No" if preds[i]==0 else "Yes")
 ```
-Output:
+**Output**:
 ```
 Prediction 1:
 {'Outlook': 'Sunny', 'Temperature': 'Hot', 'Humidity': 'High', 'Wind': 'Weak'}
@@ -573,17 +535,12 @@ Predicted PlayTennis: No
 - Excellent for text classification
 - Easy to interpret
 
-------
-
 ## 9. Limitations of Naive Bayes
 
 - Assumes feature independence
 - Performs poorly if features are correlated
 - Probability estimates may be inaccurate
 - Sensitive to input data quality
-
-------
-
 
 ## 11. Evaluation Metrics
 
@@ -595,8 +552,6 @@ Predicted PlayTennis: No
 
 These metrics help measure model performance.
 
-------
-
 ## 12. Applications of Naive Bayes
 
 - Spam filtering
@@ -605,10 +560,7 @@ These metrics help measure model performance.
 - Medical diagnosis
 - Recommendation systems
 
-------
-
 ## 13. Conclusion
-
 Naive Bayes is a **powerful yet simple classification algorithm** based on probability theory.
 Although it makes strong assumptions, it performs exceptionally well in many real-world applications, especially **text classification**.
 
