@@ -1,0 +1,51 @@
+/* Copy button styling */
+pre {
+  position: relative;
+  background-color: #f5f5f5; /* optional: light gray like ChatGPT */
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow: auto;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.2rem 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+pre:hover .copy-btn {
+  opacity: 1;
+}
+
+
+// .copy-btn {
+//   position: absolute;
+//   right: 0.5rem;
+//   top: 0.5rem;
+//   background-color: #4caf50;
+//   color: white;
+//   border: none;
+//   border-radius: 4px;
+//   padding: 0.2rem 0.5rem;
+//   font-size: 0.8rem;
+//   cursor: pointer;
+//   opacity: 0.7;
+//   transition: opacity 0.2s;
+// }
+
+// .copy-btn:hover {
+//   opacity: 1;
+// }
+
+// pre {
+//   position: relative; /* so the button can position itself */
+// }

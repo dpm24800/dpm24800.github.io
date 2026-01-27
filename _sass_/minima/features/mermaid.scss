@@ -1,0 +1,5 @@
+/* Make all arrowheads white */
+.mermaid svg .marker path {
+    stroke: #ff3f9f !important;
+    fill: #ff3f9f !important;
+}
