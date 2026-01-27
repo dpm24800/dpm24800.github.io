@@ -104,7 +104,7 @@ setup(
 
 And my `requirements.txt`:
 
-```txt
+```
 # requirements.txt
 numpy
 pandas
