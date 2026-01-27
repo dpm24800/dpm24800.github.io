@@ -8,12 +8,12 @@ date:   2026-01-27 3:12:45 +0545
 categories: ml e2e-project
 status: draft
 ---
-
 Today marks the beginning of an exciting journey: building a production-ready machine learning system from scratch. No notebooks flying around. No dependency chaos. Just clean, reproducible engineering practices from Day 1. Here's what I accomplished—and why each step matters more than you might think.
 
 ---
 
 ### What *Exactly* Is an End-to-End ML Project?
+
 An end-to-end (E2E) machine learning project isn't just training a model and calling it a day. It's a **complete lifecycle** that takes you from raw data to a deployed system delivering real-world value. Think of it as building a factory—not just crafting a single widget.
 
 A true E2E ML pipeline spans three critical phases:
@@ -116,6 +116,7 @@ seaborn
 
 1. **Single source of truth**: Dependencies live in `requirements.txt`, not duplicated in `setup.py`
 2. **Editable install support**: The `-e .` flag (commented out in requirements.txt) enables *development mode*:
+
    ```bash
    pip install -e .
    ```
@@ -228,7 +229,8 @@ These choices compound. A project with solid foundations scales gracefully. One 
 ---
 
 *Follow my end-to-end ML journey: [GitHub Repo Link](https://github.com/dpm24800/ml-project)*
-*Day 1 complete. Foundation laid. Tomorrow: building the nervous system (logger.py + exception.py).*
+*Day 1 complete. Foundation laid. 
+Tomorrow: building the nervous system (logger.py + exception.py).*
 
 ---
 
