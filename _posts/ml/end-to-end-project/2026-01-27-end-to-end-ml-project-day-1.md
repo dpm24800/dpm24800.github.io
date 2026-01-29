@@ -228,7 +228,7 @@ These choices compound. A project with solid foundations scales gracefully. One 
 
 ---
 
-*Follow my end-to-end ML journey: [GitHub Repo Link](https://github.com/dpm24800/ml-project)*  
+*Follow my end-to-end ML journey: [GitHub Repo Link](https://github.com/dpm24800/e2e-ml-project)*  
 *Day 1 complete. Foundation laid.*  
 *Tomorrow: building the nervous system (logger.py + exception.py).*
 
