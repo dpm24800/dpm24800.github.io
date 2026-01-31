@@ -4,7 +4,7 @@ title: Day 5 of My End-to-End ML Project
 description: Pipeline Orchestration and Workflow Automation # The Conductor Arrives
 thumbnail: /assets/images/ml/e2e-projects/project-1/day-5.png
 author: Dipak Pulami Magar
-date:   2026-01-30 10:12:45 +0545
+date:   2026-01-31 10:12:45 +0545
 categories: ml e2e-project
 status: draft
 ---
