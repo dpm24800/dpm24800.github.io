@@ -367,7 +367,7 @@ e2e-ml-project/
 
 Ensure `requirements.txt` contains all dependencies with compatible versions:
 
-```txt
+```
 setuptools
 numpy
 pandas
