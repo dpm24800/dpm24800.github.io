@@ -1,0 +1,57 @@
+DATA INPUT LAYER
+├── Raw Dataset (notebook/data/StudentsPerformance.csv)
+│   └── Initial exploratory analysis & validation in Jupyter notebooks
+│
+┌─────────────────────────────────────────────────────────────────────┐
+│ CORE ML ENGINEERING LAYER (src/)                                    │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  ┌──────────────────┐     ┌──────────────────┐     ┌──────────────┐ │
+│  │ Data Ingestion   │────▶│ Data Transformation│────▶│ Model Training│ │
+│  │ (components/     │     │ (components/      │     │ (components/  │ │
+│  │  data_ingestion) │     │  data_transformation)│   │  model_trainer)│ │
+│  └──────────────────┘     └──────────────────┘     └──────────────┘ │
+│          │                         │                      │         │
+│          ▼                         ▼                      ▼         │
+│  ┌──────────────────────────────────────────────────────────────┐   │
+│  │ Training Orchestration (pipelines/train_pipeline.py)        │   │
+│  └──────────────────────────────────────────────────────────────┘   │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+│
+ARTIFACT PERSISTENCE LAYER (artifacts/)
+├── data.csv          → Raw consolidated dataset
+├── train.csv/test.csv → Stratified train-test splits
+├── preprocessor.pkl  → Serialized ColumnTransformer pipeline
+├── model.pkl         → Trained estimator (e.g., RandomForest/GradientBoosting)
+└── Execution logs    → (logs/ directory for audit trails)
+│
+┌─────────────────────────────────────────────────────────────────────┐
+│ INFERENCE ENGINE LAYER (src/pipelines/predict_pipeline.py)          │
+├─────────────────────────────────────────────────────────────────────┤
+│                                                                     │
+│  ┌──────────────────┐      ┌──────────────────┐                      │
+│  │ CustomData       │────▶ │ PredictPipeline  │                     │
+│  │ (input schema    │      │ (loads artifacts, │                     │
+│  │  validation)     │      │  transforms, predicts)                 │
+│  └──────────────────┘      └──────────────────    ┘                     │
+│                                                                     │
+└─────────────────────────────────────────────────────────────────────┘
+│
+DEPLOYMENT LAYER
+├── Flask REST API (flask_app.py)
+│   ├── Endpoints: POST /predict (JSON payload)
+│   ├── Serves model at http://localhost:5000 (production-ready)
+│   └── Uses templates/ for admin dashboard (home.html, index.html)
+│
+└── Streamlit UI (streamlit_app.py)
+    ├── Interactive web interface for non-technical users
+    ├── Cloud-deployable (Streamlit Cloud / Hugging Face Spaces)
+    └── Real-time prediction with form-based input
+│
+OPERATIONAL FOUNDATION
+├── Exception Handling (src/exception.py) → Custom ML exceptions
+├── Logging Framework (src/logger.py)    → Structured pipeline logging
+├── Utilities (src/utils.py)             → Helper functions (file ops, model saving)
+├── Packaging (setup.py)                 → Installable Python package
+└── Reproducibility (requirements.txt)   → Dependency pinning
